@@ -12,4 +12,7 @@ RUN  chmod +x *.sh && ./install.sh
 #RUN dpkg -i powershell_7.1.1-1.ubuntu.18.04_amd64.deb && apt-get install -f
 #RUN rm powershell_7.1.1-1.ubuntu.18.04_amd64.deb
 VOLUME /RainbowMiner/Config
+
+EXPOSE 4000/tcp
+
 CMD /bin/bash
