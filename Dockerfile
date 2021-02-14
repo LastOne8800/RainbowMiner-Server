@@ -2,8 +2,10 @@ FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y ubuntu-server
 
-RUN apt-get update && apt-get install -y systemd liblttng-ust0 vim iputils-ping libicu60
+RUN apt-get update && apt-get install -y systemd liblttng-ust0 vim iputils-ping
 RUN apt-get -y install git  software-properties-common wget dkms build-essential
+RUN apt-get -y install libicu60
+
 RUN git clone https://github.com/rainbowminer/RainbowMiner
 WORKDIR RainbowMiner
 RUN  chmod +x *.sh && ./install.sh
