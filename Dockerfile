@@ -25,5 +25,5 @@ CMD $COMMAND
 EXPOSE 4000
 
 RUN \
-    APP_ICON_URL=https://github.com/jlesage/docker-templates/raw/master/jlesage/images/firefox-icon.png && \
+    APP_ICON_URL=https://github.com/RainbowMiner/RainbowMiner/raw/master/web/images/favicon.ico && \
     install_app_icon.sh "$APP_ICON_URL"
