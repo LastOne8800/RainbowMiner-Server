@@ -25,6 +25,6 @@ RUN  chmod +x *.sh && ./install.sh
 
 
 CMD $COMMAND
-EXPOSE 4000/tcp
+EXPOSE 4000
 
 
