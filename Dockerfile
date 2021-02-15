@@ -16,10 +16,10 @@ RUN git clone https://github.com/rainbowminer/RainbowMiner
 WORKDIR RainbowMiner
 RUN  chmod +x *.sh && ./install.sh
 
-RUN mkdir /RainbowMiner/Config
-RUN mkdir /RainbowMiner/Bin
-VOLUME /RainbowMiner/Config
-VOLUME /RainbowMiner/Bin
+#RUN mkdir /RainbowMiner/Config
+#RUN mkdir /RainbowMiner/Bin
+VOLUME ["/RainbowMiner/Config"]
+VOLUME ["/RainbowMiner/Bin"]
 
 CMD $COMMAND
 EXPOSE 4000
