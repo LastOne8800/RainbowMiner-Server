@@ -1,7 +1,9 @@
 FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get install -y ubuntu-server
+ENV COMMAND=/bin/bash
 
+#Setup basic Ubuntu Server
+RUN apt-get update && apt-get install -y ubuntu-server
 RUN apt-get update && apt-get install -y systemd liblttng-ust0 vim iputils-ping
 RUN apt-get -y install git  software-properties-common wget dkms build-essential
 
@@ -15,8 +17,12 @@ RUN wget https://github.com/PowerShell/PowerShell/releases/download/v7.1.1/power
 RUN dpkg -i powershell_7.1.1-1.ubuntu.20.04_amd64.deb && apt-get install -f
 RUN rm powershell_7.1.1-1.ubuntu.20.04_amd64.deb
 
+RUN mkdir /RainbowMiner/Config
+RUN mkdir /RainbowMiner/Bin
+VOLUME /RainbowMiner/Bin
 VOLUME /RainbowMiner/Config
 
+CMD $COMMAND
 EXPOSE 4000/tcp
 
-CMD /bin/bash
+#CMD /bin/bash
