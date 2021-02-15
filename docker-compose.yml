@@ -1,0 +1,8 @@
+rainbowminer-server:
+  image: quantumobject/docker-cacti
+  interface:
+    ports:
+       - "4000:4000"
+  volumes:
+     - ./config:/config/
+     - ./bin/:/bin/
