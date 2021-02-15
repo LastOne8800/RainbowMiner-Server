@@ -24,4 +24,6 @@ VOLUME ["/RainbowMiner/Bin"]
 CMD $COMMAND
 EXPOSE 4000
 
-
+RUN \
+    APP_ICON_URL=https://github.com/jlesage/docker-templates/raw/master/jlesage/images/firefox-icon.png && \
+    install_app_icon.sh "$APP_ICON_URL"
