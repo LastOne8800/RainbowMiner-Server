@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND noninteractive
-ENV COMMAND=/bin/bash
-
+#ENV COMMAND=/bin/bash
+ENV COMMAND=./start.sh
 #Setup basic Ubuntu Server
 RUN apt-get update && apt-get install -y ubuntu-server
 RUN apt-get update && apt-get install -y systemd liblttng-ust0 vim iputils-ping
