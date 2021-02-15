@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND noninteractive
-ENV COMMAND=./start.sh
+ENV COMMAND=./start-nohup.sh
 
 #Setup basic Ubuntu Server
 RUN apt-get update && apt-get install -y ubuntu-server
