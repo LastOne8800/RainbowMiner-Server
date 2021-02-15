@@ -3,7 +3,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV COMMAND=./start.sh
 
 #Setup basic Ubuntu Server
-#RUN apt-get update && apt-get install -y ubuntu-server
+RUN apt-get update && apt-get install -y ubuntu-server
 RUN apt-get install --no-install-recommends -y systemd liblttng-ust0 vim iputils-ping git software-properties-common wget dkms build-essential nano
 
 #Install powershell
